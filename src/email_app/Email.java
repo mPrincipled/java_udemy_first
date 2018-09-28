@@ -44,7 +44,7 @@ public class Email {
 	{
 		int chosenDepartment;
 		
-		System.out.println("Enter the department\n1 for Sales\n2 for Development\n3 for Accounting\n0 for none.\n Enter the code:");
+		System.out.println("Department Codes\n1 for Sales\n2 for Development\n3 for Accounting\n0 for none.\n Enter the code:");
 		Scanner in = new Scanner(System.in);
 		if(in.hasNextInt())
 		{
@@ -85,4 +85,41 @@ public class Email {
 		return new String(genPassword);		
 	}
 	// set mailbox capacity
+	
+	public void setMailboxCapacity(int capacity)
+	{
+		this.mailboxCapacity = capacity;
+	}
+	
+	// Set the alternate email
+	public void setAlternateEmail(String altEmail)
+	{
+		this.alternateEmail = altEmail;
+	}
+	
+	// change password
+	public void changePassword(String pword)
+	{
+		this.password = pword;
+	}
+	
+	public int getMailboxCapacity()
+	{
+		return this.mailboxCapacity;
+	}
+	
+	public String getAlternateEmail()
+	{
+		return this.alternateEmail;
+	}
+	
+	public String getPassword()
+	{
+		return this.password;
+	}
+	
+	public String getInfo()
+	{
+		return this.firstName + " " + this.lastName + " " + this.email;
+	}
 }
